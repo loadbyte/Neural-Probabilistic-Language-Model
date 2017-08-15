@@ -1,26 +1,26 @@
-Neural Probabilistic Language Model
+# Neural Probabilistic Language Model
 
 This program is implemented using tensorflow
 
-System requirements:
+# System requirements:
 python 2.7
 tensorflow 0.12.0
 numpy 0.10
 
-How to run:
-*download corpus from http://mattmahoney.net/dc/text8.zip
-*and uzip it and place it in data folder
-*then run below command
+# How to run:
+* download corpus from http://mattmahoney.net/dc/text8.zip
+* and uzip it and place it in data folder
+* then run below command
 	python NPLN.py
 
-Files details:
+# Files details:
 NPLM.py: this program holds the neural network modal
 generatetnse.py: program reads the generated embedding by the nplm modal and plots the graph 
 wrd_embeds.npy is the numpy pickle object which holds the 50 dimension vectors
 nplm_val.txt holds the sample embedding vector
 output.png the output image
 
-Function details:
+# Function details:
 
 This implementation has class Corpusprocess()
 with two methods
