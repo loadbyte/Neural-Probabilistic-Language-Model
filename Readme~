@@ -1,0 +1,43 @@
+Neural Probabilistic Language Model
+
+This program is implemented using tensorflow
+
+System requirements:
+python 2.7
+tensorflow 0.12.0
+numpy 0.10
+
+How to run:
+*download corpus from http://mattmahoney.net/dc/text8.zip
+*and uzip it and place it in data folder
+*then run below command
+	python NPLN.py
+
+Files details:
+NPLM.py: this program holds the neural network modal
+generatetnse.py: program reads the generated embedding by the nplm modal and plots the graph 
+wrd_embeds.npy is the numpy pickle object which holds the 50 dimension vetors
+nplm_val.txt holds the sample embedding vector
+output.png the output image
+
+Function details:
+
+This implementation has class Corpusprocess()
+with two methods
+
+* def preprocess(self, input_file)
+	 preprocess method take the input_file and reads the corpus and then finds most frq_word 
+	 and then a finds dict of word to id mapping, where unique id is assigned for each unique 
+	 word in corpus. By using the counter class from python , which will give the word count
+	  and dic_wrd will contain the word to unique id mapping and reverse dictionary for id to
+	   word mapping.
+	 
+* def next_batch(self)
+	The below method next_batch gets the data and creates batches, this method helps us for
+	 gettting the data that is xdata for previous 	words and ydata for target word to be 
+	 predicted with some probabilities.
+
+* graph = tf.Graph()
+	this method will create the computation graph for the tensorflow
+* tf.Session(graph=graph) 
+	this method will create the create session and computes the graph
