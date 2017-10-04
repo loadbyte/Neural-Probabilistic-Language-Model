@@ -2,7 +2,7 @@
 
 This program is implemented using tensorflow
 
-# System requirements:
+# System requirements :
 python 2.7
 tensorflow 0.12.0
 numpy 0.10
